@@ -1,0 +1,15 @@
+C:\Users\yk\source\repos\WindowsFormsApp-LoginScreen\WindowsFormsApp-LoginScreen\bin\Debug\WindowsFormsApp-LoginScreen.exe.config
+C:\Users\yk\source\repos\WindowsFormsApp-LoginScreen\WindowsFormsApp-LoginScreen\bin\Debug\WindowsFormsApp-LoginScreen.exe
+C:\Users\yk\source\repos\WindowsFormsApp-LoginScreen\WindowsFormsApp-LoginScreen\bin\Debug\WindowsFormsApp-LoginScreen.pdb
+C:\Users\yk\source\repos\WindowsFormsApp-LoginScreen\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp-LoginScreen.csproj.AssemblyReference.cache
+C:\Users\yk\source\repos\WindowsFormsApp-LoginScreen\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp-LoginScreen.csproj.SuggestedBindingRedirects.cache
+C:\Users\yk\source\repos\WindowsFormsApp-LoginScreen\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp_LoginScreen.Form1.resources
+C:\Users\yk\source\repos\WindowsFormsApp-LoginScreen\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp_LoginScreen.Properties.Resources.resources
+C:\Users\yk\source\repos\WindowsFormsApp-LoginScreen\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp-LoginScreen.csproj.GenerateResource.cache
+C:\Users\yk\source\repos\WindowsFormsApp-LoginScreen\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp-LoginScreen.csproj.CoreCompileInputs.cache
+C:\Users\yk\source\repos\WindowsFormsApp-LoginScreen\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp-LoginScreen.exe
+C:\Users\yk\source\repos\WindowsFormsApp-LoginScreen\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp-LoginScreen.pdb
+C:\Users\yk\source\repos\WindowsFormsApp-LoginScreen\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp_LoginScreen.MainPage.resources
+C:\Users\yk\source\repos\WindowsFormsApp-LoginScreen\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp_LoginScreen.UpdateItem.resources
+C:\Users\yk\source\repos\WindowsFormsApp-LoginScreen\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp_LoginScreen.ContentDetails.resources
+C:\Users\yk\source\repos\WindowsFormsApp-LoginScreen\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp_LoginScreen.CreateAccount.resources
