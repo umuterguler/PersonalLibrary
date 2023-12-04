@@ -13,3 +13,18 @@ C:\Users\yk\source\repos\WindowsFormsApp-LoginScreen\WindowsFormsApp-LoginScreen
 C:\Users\yk\source\repos\WindowsFormsApp-LoginScreen\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp_LoginScreen.UpdateItem.resources
 C:\Users\yk\source\repos\WindowsFormsApp-LoginScreen\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp_LoginScreen.ContentDetails.resources
 C:\Users\yk\source\repos\WindowsFormsApp-LoginScreen\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp_LoginScreen.CreateAccount.resources
+S:\Code Sata\PersonalLibraryProject\PersonalLibrary\WindowsFormsApp-LoginScreen\bin\Debug\WindowsFormsApp-LoginScreen.exe.config
+S:\Code Sata\PersonalLibraryProject\PersonalLibrary\WindowsFormsApp-LoginScreen\bin\Debug\WindowsFormsApp-LoginScreen.exe
+S:\Code Sata\PersonalLibraryProject\PersonalLibrary\WindowsFormsApp-LoginScreen\bin\Debug\WindowsFormsApp-LoginScreen.pdb
+S:\Code Sata\PersonalLibraryProject\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp-LoginScreen.csproj.AssemblyReference.cache
+S:\Code Sata\PersonalLibraryProject\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp-LoginScreen.csproj.SuggestedBindingRedirects.cache
+S:\Code Sata\PersonalLibraryProject\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp_LoginScreen.ContentDetails.resources
+S:\Code Sata\PersonalLibraryProject\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp_LoginScreen.CreateAccount.resources
+S:\Code Sata\PersonalLibraryProject\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp_LoginScreen.Form1.resources
+S:\Code Sata\PersonalLibraryProject\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp_LoginScreen.MainPage.resources
+S:\Code Sata\PersonalLibraryProject\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp_LoginScreen.Properties.Resources.resources
+S:\Code Sata\PersonalLibraryProject\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp_LoginScreen.UpdateItem.resources
+S:\Code Sata\PersonalLibraryProject\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp-LoginScreen.csproj.GenerateResource.cache
+S:\Code Sata\PersonalLibraryProject\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp-LoginScreen.csproj.CoreCompileInputs.cache
+S:\Code Sata\PersonalLibraryProject\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp-LoginScreen.exe
+S:\Code Sata\PersonalLibraryProject\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp-LoginScreen.pdb

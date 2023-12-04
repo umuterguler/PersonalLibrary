@@ -14,12 +14,14 @@ namespace WindowsFormsApp_LoginScreen
     {
         MainPage mnpg;
         ContentDetails details;
-        public UpdateItem()
+        public UpdateItem(MainPage mainPage)
         {
             InitializeComponent();
+            mnpg = mainPage; // MainPage referansını burada alıyoruz
+
         }
 
-      
+        
 
         private void button_close_Click(object sender, EventArgs e)
         {
@@ -88,13 +90,25 @@ namespace WindowsFormsApp_LoginScreen
             }
         }
 
+        // UpdateItem formu içindeki button_saveupload_Click metodu
         private void button_saveupload_Click(object sender, EventArgs e)
         {
-            // database tabanlı yapılacak.
+            // Kullanıcının girdiği isim ve fotoğraf yolu
+            string isim = textBox1.Text;
+            string fotoYolu = "C:\\Users\\mertg\\Desktop\\fotolarproje\\sincap.png"; // Kullanıcının seçtiği fotoğraf yolu
 
+            // UpdateItem'dan ana forma erişim
+            MainPage mainPage = this.Owner as MainPage;
 
-   
+            if (mainPage != null)
+            {
+                // Ana formdaki FlowLayoutPanel'e yeni kart eklemek için metodu kullan
+                mainPage.AddNewCard(isim, fotoYolu);
+            }
 
+            // Formu kapat
+            this.Close();
         }
+
     }
 }
