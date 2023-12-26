@@ -56,3 +56,17 @@ C:\Users\Melih\source\repos\PersonalLibrary1\WindowsFormsApp-LoginScreen\obj\Deb
 C:\Users\Melih\source\repos\PersonalLibrary1\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp-LoginScreen.csproj.CoreCompileInputs.cache
 C:\Users\Melih\source\repos\PersonalLibrary1\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp-LoginScreen.exe
 C:\Users\Melih\source\repos\PersonalLibrary1\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp-LoginScreen.pdb
+C:\Users\Melih\Documents\GitHub\PersonalLibrary\WindowsFormsApp-LoginScreen\bin\Debug\WindowsFormsApp-LoginScreen.exe.config
+C:\Users\Melih\Documents\GitHub\PersonalLibrary\WindowsFormsApp-LoginScreen\bin\Debug\WindowsFormsApp-LoginScreen.exe
+C:\Users\Melih\Documents\GitHub\PersonalLibrary\WindowsFormsApp-LoginScreen\bin\Debug\WindowsFormsApp-LoginScreen.pdb
+C:\Users\Melih\Documents\GitHub\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp-LoginScreen.csproj.AssemblyReference.cache
+C:\Users\Melih\Documents\GitHub\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp_LoginScreen.ContentDetails.resources
+C:\Users\Melih\Documents\GitHub\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp_LoginScreen.CreateAccount.resources
+C:\Users\Melih\Documents\GitHub\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp_LoginScreen.Form1.resources
+C:\Users\Melih\Documents\GitHub\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp_LoginScreen.MainPage.resources
+C:\Users\Melih\Documents\GitHub\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp_LoginScreen.Properties.Resources.resources
+C:\Users\Melih\Documents\GitHub\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp_LoginScreen.UpdateItem.resources
+C:\Users\Melih\Documents\GitHub\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp-LoginScreen.csproj.GenerateResource.cache
+C:\Users\Melih\Documents\GitHub\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp-LoginScreen.csproj.CoreCompileInputs.cache
+C:\Users\Melih\Documents\GitHub\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp-LoginScreen.exe
+C:\Users\Melih\Documents\GitHub\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Debug\WindowsFormsApp-LoginScreen.pdb

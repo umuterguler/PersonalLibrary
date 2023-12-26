@@ -103,13 +103,26 @@ namespace WindowsFormsApp_LoginScreen
             AddNewCardsForCategory("book");
             AddNewCardsForCategory("game");
 
-            booksLayoutPanel.AutoScroll = true;
-            gamesLayoutPanel.AutoScroll = true;
-            moviesLayoutPanel.AutoScroll = true;
+            moviesLayoutPanel.Visible = false;
+            gamesLayoutPanel.Visible = false;
+            booksLayoutPanel.Visible = false;
 
-            booksLayoutPanel.VerticalScroll.Visible = false;
-            gamesLayoutPanel.VerticalScroll.Visible = false;
-            moviesLayoutPanel.VerticalScroll.Visible = false;
+            switch (mainLabel.Text)
+            {
+                case "Books":
+                    booksLayoutPanel.Visible = true;
+                    break;
+                case "Movies":
+                    moviesLayoutPanel.Visible = true;
+                    break;
+                case "Games":
+                    gamesLayoutPanel.Visible = true;
+                    break;
+                // İlgili metin yoksa, varsayılan olarak bir şey yapabilirsiniz.
+                default:
+                    break;
+            }
+
             // Ana form ayarları burada devam eder...
         }
 
@@ -226,11 +239,6 @@ namespace WindowsFormsApp_LoginScreen
             details.Show();
         }
 
-        private void booksLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonForMute_Click(object sender, EventArgs e)
         {
             muteMusicFun();
@@ -313,6 +321,74 @@ namespace WindowsFormsApp_LoginScreen
 
             return userID;
         }
+
+        private void labelFirst_Click(object sender, EventArgs e)
+        {
+            
+
+            string labelText = labelFirst.Text;
+
+            // Tüm FlowLayoutPanel'leri gizle
+            booksLayoutPanel.Visible = false;
+            moviesLayoutPanel.Visible = false;
+            gamesLayoutPanel.Visible = false;
+
+            // İlgili FlowLayoutPanel'ı görünür yap
+            switch (labelText)
+            {
+                case "Books":
+                    booksLayoutPanel.Visible = true;
+                    break;
+                case "Movies":
+                    moviesLayoutPanel.Visible = true;
+                    break;
+                case "Games":
+                    gamesLayoutPanel.Visible = true;
+                    break;
+                // İlgili metin yoksa, varsayılan olarak bir şey yapabilirsiniz.
+                default:
+                    break;
+            }
+
+            string temp = mainLabel.Text;
+            mainLabel.Text = labelFirst.Text;
+            labelFirst.Text = temp;
+        }
+
+        private void labelSecond_Click(object sender, EventArgs e)
+        {
+            
+
+            string labelText = labelSecond.Text;
+
+            // Tüm FlowLayoutPanel'leri gizle
+            booksLayoutPanel.Visible = false;
+            moviesLayoutPanel.Visible = false;
+            gamesLayoutPanel.Visible = false;
+
+            // İlgili FlowLayoutPanel'ı görünür yap
+            switch (labelText)
+            {
+                case "Books":
+                    booksLayoutPanel.Visible = true;
+                    break;
+                case "Movies":
+                    moviesLayoutPanel.Visible = true;
+                    break;
+                case "Games":
+                    gamesLayoutPanel.Visible = true;
+                    break;
+                // İlgili metin yoksa, varsayılan olarak bir şey yapabilirsiniz.
+                default:
+                    break;
+            }
+
+            string temp = mainLabel.Text;
+            mainLabel.Text = labelSecond.Text;
+            labelSecond.Text = temp;
+        }
+
+        
     }
 }
 
