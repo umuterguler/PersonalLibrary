@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Media;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,17 +15,39 @@ namespace WindowsFormsApp_LoginScreen
 {
     public partial class Form1 : Form
     {
-        
+        private SqlConnection conn;
 
-        private bool musicPlaying = true;
+        public bool musicPlaying = true;
         SoundPlayer snd = new SoundPlayer();
         MainPage mnpg;
         CreateAccount crtacc;
+
         public Form1()
         {
             InitializeComponent();
+            string connString = "Data Source=DESKTOP-0FIEU0A\\SQLEXPRESS;Initial Catalog=PersonalLibrary;Integrated Security=True";
+            conn = new SqlConnection(connString);
 
+            // Butonun arka plan rengini belirle
+            muteButtonForm1.BackColor = Color.FromArgb(75, 255, 255, 255); // 128 = Opacity (0-255), sonraki üç parametre RGB renk değerleri
+            unmuteButtonForm1.BackColor = Color.FromArgb(75, 255, 255, 255); // 128 = Opacity (0-255), sonraki üç parametre RGB renk değerleri
+
+            // Eğer butonun kenarlığını görmek istemiyorsanız, FlatStyle özelliğini Flat yapabilirsiniz
+            muteButtonForm1.FlatStyle = FlatStyle.Flat;
+            unmuteButtonForm1.FlatStyle = FlatStyle.Flat;
         }
+
+
+        private bool IsEmailValid(string email)
+        {
+            return email.Length >= 5;
+        }
+
+        private bool IsPasswordValid(string password)
+        {
+            return password.Length >= 8 && password.Any(char.IsDigit);
+        }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -43,8 +67,6 @@ namespace WindowsFormsApp_LoginScreen
             snd.SoundLocation = dizin;
             snd.PlayLooping();
 
-
-
         }
 
 
@@ -52,41 +74,36 @@ namespace WindowsFormsApp_LoginScreen
         {
             DialogResult dialogResult = MessageBox.Show("Do you want to exit?", "Exit", MessageBoxButtons.OKCancel);
             if (dialogResult == DialogResult.OK)
-                snd.Stop();
-            Close();
+                Application.Exit();
 
         }
 
-        private void pictureBox_mute_Click(object sender, EventArgs e)
-        {
-
-            if (musicPlaying == true)
-            {
-                snd.Stop();
-                musicPlaying = false;
-            }
-            else
-            {
-                snd.Play();
-                musicPlaying = true;
-            }
-        }
+        
 
         private void button_login_Click(object sender, EventArgs e)
         {   // burda database ile kullanıcı adı sıfre kontrol edılıp girilecek simdilik bos olmamasını sagladım tabı bu yetersız
-            if (textBox_username.Text != "" && textBox_password.Text != "")
+            if (IsEmailValid(textBox_username.Text) && IsPasswordValid(textBox_password.Text))
             {
-                mnpg = new MainPage();
-                mnpg.Owner = this;
-                mnpg.Show();
-                this.Hide();
-                mnpg.label_username.Text = textBox_username.Text;
-            }
-            else // burda databasede boyle bırı olup olmadıgı kontrol edılecek kullanıcı adı ve sıfre kontrolu yapılcak o hatalı veya bu hatalı
-            {
-                MessageBox.Show("Account Not Found or Username or Password is Incorrect", "Error");
-            }
+                if (checkUserLogin(textBox_username.Text, textBox_password.Text))
+                {
+                    mnpg = new MainPage();
+                    mnpg.form1Obj = this; // Form1 referansını MainPage formuna aktar
+                    mnpg.Owner = this;
+                    this.Hide();
 
+                    mnpg.label_username.Text = textBox_username.Text;
+                    mnpg.Show();
+
+                }
+                else
+                {
+                    MessageBox.Show("Account Not Found or Username or Password is Incorrect", "Error");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid email or password format. Please check your inputs.", "Error");
+            }
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -94,6 +111,70 @@ namespace WindowsFormsApp_LoginScreen
             crtacc = new CreateAccount();
             crtacc.Owner = this;
             crtacc.Show();
+        }
+
+        private void muteButtonForm1_Click(object sender, EventArgs e)
+        {
+            muteMusicFun();
+        }
+
+        private void unmuteButtonForm1_Click(object sender, EventArgs e)
+        {
+            unmuteMusicFun();
+        }
+
+        public void muteMusicFun()
+        {
+            snd.Stop();
+            muteButtonForm1.Enabled = false;
+            muteButtonForm1.Visible = false;
+
+            unmuteButtonForm1.Enabled = true;
+            unmuteButtonForm1.Visible = true;
+
+            musicPlaying = false;
+        }
+
+        public void unmuteMusicFun()
+        {
+            string dizin = Application.StartupPath + "\\music.wav";
+            snd.SoundLocation = dizin;
+            snd.PlayLooping();
+            unmuteButtonForm1.Enabled = false;
+            unmuteButtonForm1.Visible = false;
+
+            muteButtonForm1.Enabled = true;
+            muteButtonForm1.Visible = true;
+
+            musicPlaying = true;
+        }
+        private bool checkUserLogin(string username, string password)
+        {
+            try
+            {
+                conn.Open();
+
+                string query = "SELECT COUNT(*) FROM users WHERE username = @username AND password = @password";
+
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    command.Parameters.AddWithValue("@username", username);
+                    command.Parameters.AddWithValue("@password", password);
+
+                    int userNumber = (int)command.ExecuteScalar();
+
+                    return userNumber > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
     }
 }

@@ -43,13 +43,13 @@
             this.textBox_password = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox_mute = new System.Windows.Forms.PictureBox();
+            this.muteButtonForm1 = new System.Windows.Forms.Button();
+            this.unmuteButtonForm1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_mute)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -68,7 +68,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(3, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 15);
+            this.label2.Size = new System.Drawing.Size(113, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Personal Library";
             // 
@@ -102,7 +102,7 @@
             // 
             this.textBox_username.Location = new System.Drawing.Point(37, 81);
             this.textBox_username.Name = "textBox_username";
-            this.textBox_username.Size = new System.Drawing.Size(235, 23);
+            this.textBox_username.Size = new System.Drawing.Size(235, 27);
             this.textBox_username.TabIndex = 2;
             // 
             // label1
@@ -111,7 +111,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(116, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 20);
+            this.label1.Size = new System.Drawing.Size(63, 25);
             this.label1.TabIndex = 3;
             this.label1.Text = "Login";
             // 
@@ -163,7 +163,7 @@
             this.linkLabel2.LinkColor = System.Drawing.Color.White;
             this.linkLabel2.Location = new System.Drawing.Point(91, 243);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(116, 15);
+            this.linkLabel2.Size = new System.Drawing.Size(144, 20);
             this.linkLabel2.TabIndex = 8;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Create New Account";
@@ -173,9 +173,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(34, 112);
+            this.label4.Location = new System.Drawing.Point(34, 109);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 15);
+            this.label4.Size = new System.Drawing.Size(70, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "Password";
             // 
@@ -184,16 +184,16 @@
             this.textBox_password.Location = new System.Drawing.Point(37, 130);
             this.textBox_password.Name = "textBox_password";
             this.textBox_password.PasswordChar = '*';
-            this.textBox_password.Size = new System.Drawing.Size(235, 23);
+            this.textBox_password.Size = new System.Drawing.Size(235, 27);
             this.textBox_password.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(34, 63);
+            this.label3.Location = new System.Drawing.Point(34, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 15);
+            this.label3.Size = new System.Drawing.Size(75, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Username";
             // 
@@ -210,26 +210,41 @@
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox_mute
+            // muteButtonForm1
             // 
-            this.pictureBox_mute.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox_mute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox_mute.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_mute.Image")));
-            this.pictureBox_mute.Location = new System.Drawing.Point(33, 504);
-            this.pictureBox_mute.Name = "pictureBox_mute";
-            this.pictureBox_mute.Size = new System.Drawing.Size(27, 28);
-            this.pictureBox_mute.TabIndex = 6;
-            this.pictureBox_mute.TabStop = false;
-            this.pictureBox_mute.Click += new System.EventHandler(this.pictureBox_mute_Click);
+            this.muteButtonForm1.BackColor = System.Drawing.Color.Transparent;
+            this.muteButtonForm1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.muteButtonForm1.Image = ((System.Drawing.Image)(resources.GetObject("muteButtonForm1.Image")));
+            this.muteButtonForm1.Location = new System.Drawing.Point(35, 504);
+            this.muteButtonForm1.Name = "muteButtonForm1";
+            this.muteButtonForm1.Size = new System.Drawing.Size(27, 28);
+            this.muteButtonForm1.TabIndex = 7;
+            this.muteButtonForm1.UseVisualStyleBackColor = false;
+            this.muteButtonForm1.Click += new System.EventHandler(this.muteButtonForm1_Click);
+            // 
+            // unmuteButtonForm1
+            // 
+            this.unmuteButtonForm1.BackColor = System.Drawing.Color.Transparent;
+            this.unmuteButtonForm1.Enabled = false;
+            this.unmuteButtonForm1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.unmuteButtonForm1.Image = ((System.Drawing.Image)(resources.GetObject("unmuteButtonForm1.Image")));
+            this.unmuteButtonForm1.Location = new System.Drawing.Point(35, 504);
+            this.unmuteButtonForm1.Name = "unmuteButtonForm1";
+            this.unmuteButtonForm1.Size = new System.Drawing.Size(27, 28);
+            this.unmuteButtonForm1.TabIndex = 8;
+            this.unmuteButtonForm1.UseVisualStyleBackColor = false;
+            this.unmuteButtonForm1.Visible = false;
+            this.unmuteButtonForm1.Click += new System.EventHandler(this.unmuteButtonForm1_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(879, 570);
-            this.Controls.Add(this.pictureBox_mute);
+            this.Controls.Add(this.unmuteButtonForm1);
+            this.Controls.Add(this.muteButtonForm1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox3);
@@ -249,7 +264,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_mute)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,8 +283,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox_mute;
         public System.Windows.Forms.TextBox textBox_username;
+        private System.Windows.Forms.Button muteButtonForm1;
+        private System.Windows.Forms.Button unmuteButtonForm1;
     }
 }
 

@@ -33,16 +33,21 @@
             this.labelofapp = new System.Windows.Forms.Label();
             this.closebutton = new System.Windows.Forms.Button();
             this.navbar = new System.Windows.Forms.Panel();
+            this.buttonForMute = new System.Windows.Forms.Button();
+            this.buttonForUnmute = new System.Windows.Forms.Button();
             this.button_upload = new System.Windows.Forms.Button();
             this.label_username = new System.Windows.Forms.Label();
-            this.picturebox_Mute = new System.Windows.Forms.PictureBox();
             this.label_welcome = new System.Windows.Forms.Label();
             this.button_logout = new System.Windows.Forms.Button();
             this.labelofcaption = new System.Windows.Forms.Label();
-            this.myFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.booksLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.moviesLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.gamesLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.booksLabel = new System.Windows.Forms.Label();
+            this.moviesLabel = new System.Windows.Forms.Label();
+            this.gamesLabel = new System.Windows.Forms.Label();
             this.toppanel.SuspendLayout();
             this.navbar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picturebox_Mute)).BeginInit();
             this.SuspendLayout();
             // 
             // toppanel
@@ -62,7 +67,7 @@
             this.labelofapp.ForeColor = System.Drawing.Color.White;
             this.labelofapp.Location = new System.Drawing.Point(3, 10);
             this.labelofapp.Name = "labelofapp";
-            this.labelofapp.Size = new System.Drawing.Size(91, 15);
+            this.labelofapp.Size = new System.Drawing.Size(113, 20);
             this.labelofapp.TabIndex = 5;
             this.labelofapp.Text = "Personal Library";
             // 
@@ -84,9 +89,10 @@
             // navbar
             // 
             this.navbar.BackColor = System.Drawing.Color.Black;
+            this.navbar.Controls.Add(this.buttonForMute);
+            this.navbar.Controls.Add(this.buttonForUnmute);
             this.navbar.Controls.Add(this.button_upload);
             this.navbar.Controls.Add(this.label_username);
-            this.navbar.Controls.Add(this.picturebox_Mute);
             this.navbar.Controls.Add(this.label_welcome);
             this.navbar.Controls.Add(this.button_logout);
             this.navbar.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -94,6 +100,28 @@
             this.navbar.Name = "navbar";
             this.navbar.Size = new System.Drawing.Size(1275, 46);
             this.navbar.TabIndex = 2;
+            // 
+            // buttonForMute
+            // 
+            this.buttonForMute.Image = ((System.Drawing.Image)(resources.GetObject("buttonForMute.Image")));
+            this.buttonForMute.Location = new System.Drawing.Point(1231, 8);
+            this.buttonForMute.Name = "buttonForMute";
+            this.buttonForMute.Size = new System.Drawing.Size(32, 30);
+            this.buttonForMute.TabIndex = 8;
+            this.buttonForMute.UseVisualStyleBackColor = true;
+            this.buttonForMute.Click += new System.EventHandler(this.buttonForMute_Click);
+            // 
+            // buttonForUnmute
+            // 
+            this.buttonForUnmute.Enabled = false;
+            this.buttonForUnmute.Image = ((System.Drawing.Image)(resources.GetObject("buttonForUnmute.Image")));
+            this.buttonForUnmute.Location = new System.Drawing.Point(1231, 7);
+            this.buttonForUnmute.Name = "buttonForUnmute";
+            this.buttonForUnmute.Size = new System.Drawing.Size(32, 30);
+            this.buttonForUnmute.TabIndex = 7;
+            this.buttonForUnmute.UseVisualStyleBackColor = true;
+            this.buttonForUnmute.Visible = false;
+            this.buttonForUnmute.Click += new System.EventHandler(this.buttonForUnmute_Click);
             // 
             // button_upload
             // 
@@ -114,22 +142,9 @@
             this.label_username.ForeColor = System.Drawing.Color.White;
             this.label_username.Location = new System.Drawing.Point(66, 13);
             this.label_username.Name = "label_username";
-            this.label_username.Size = new System.Drawing.Size(76, 22);
+            this.label_username.Size = new System.Drawing.Size(98, 27);
             this.label_username.TabIndex = 3;
             this.label_username.Text = "username";
-            // 
-            // picturebox_Mute
-            // 
-            this.picturebox_Mute.BackColor = System.Drawing.Color.White;
-            this.picturebox_Mute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.picturebox_Mute.ErrorImage = null;
-            this.picturebox_Mute.Image = ((System.Drawing.Image)(resources.GetObject("picturebox_Mute.Image")));
-            this.picturebox_Mute.Location = new System.Drawing.Point(1237, 11);
-            this.picturebox_Mute.Name = "picturebox_Mute";
-            this.picturebox_Mute.Size = new System.Drawing.Size(26, 27);
-            this.picturebox_Mute.TabIndex = 3;
-            this.picturebox_Mute.TabStop = false;
-            this.picturebox_Mute.Click += new System.EventHandler(this.picturebox_Mute_Click);
             // 
             // label_welcome
             // 
@@ -137,7 +152,7 @@
             this.label_welcome.ForeColor = System.Drawing.Color.White;
             this.label_welcome.Location = new System.Drawing.Point(3, 18);
             this.label_welcome.Name = "label_welcome";
-            this.label_welcome.Size = new System.Drawing.Size(57, 15);
+            this.label_welcome.Size = new System.Drawing.Size(71, 20);
             this.label_welcome.TabIndex = 4;
             this.label_welcome.Text = "Welcome";
             // 
@@ -161,26 +176,83 @@
             this.labelofcaption.ForeColor = System.Drawing.Color.Linen;
             this.labelofcaption.Location = new System.Drawing.Point(12, 42);
             this.labelofcaption.Name = "labelofcaption";
-            this.labelofcaption.Size = new System.Drawing.Size(255, 60);
+            this.labelofcaption.Size = new System.Drawing.Size(316, 75);
             this.labelofcaption.TabIndex = 4;
             this.labelofcaption.Text = "My Library";
             // 
-            // myFlowLayoutPanel
+            // booksLayoutPanel
             // 
-            this.myFlowLayoutPanel.AutoScroll = true;
-            this.myFlowLayoutPanel.BackColor = System.Drawing.Color.Transparent;
-            this.myFlowLayoutPanel.Location = new System.Drawing.Point(16, 129);
-            this.myFlowLayoutPanel.Name = "myFlowLayoutPanel";
-            this.myFlowLayoutPanel.Size = new System.Drawing.Size(1221, 500);
-            this.myFlowLayoutPanel.TabIndex = 5;
+            this.booksLayoutPanel.BackColor = System.Drawing.Color.Transparent;
+            this.booksLayoutPanel.Location = new System.Drawing.Point(16, 155);
+            this.booksLayoutPanel.Name = "booksLayoutPanel";
+            this.booksLayoutPanel.Size = new System.Drawing.Size(400, 500);
+            this.booksLayoutPanel.TabIndex = 6;
+            // 
+            // moviesLayoutPanel
+            // 
+            this.moviesLayoutPanel.BackColor = System.Drawing.Color.Transparent;
+            this.moviesLayoutPanel.Location = new System.Drawing.Point(442, 155);
+            this.moviesLayoutPanel.Name = "moviesLayoutPanel";
+            this.moviesLayoutPanel.Size = new System.Drawing.Size(402, 500);
+            this.moviesLayoutPanel.TabIndex = 6;
+            // 
+            // gamesLayoutPanel
+            // 
+            this.gamesLayoutPanel.BackColor = System.Drawing.Color.Transparent;
+            this.gamesLayoutPanel.Location = new System.Drawing.Point(872, 155);
+            this.gamesLayoutPanel.Name = "gamesLayoutPanel";
+            this.gamesLayoutPanel.Size = new System.Drawing.Size(391, 500);
+            this.gamesLayoutPanel.TabIndex = 6;
+            // 
+            // booksLabel
+            // 
+            this.booksLabel.AutoSize = true;
+            this.booksLabel.BackColor = System.Drawing.Color.Transparent;
+            this.booksLabel.Font = new System.Drawing.Font("Ink Free", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.booksLabel.ForeColor = System.Drawing.Color.White;
+            this.booksLabel.Location = new System.Drawing.Point(151, 127);
+            this.booksLabel.Name = "booksLabel";
+            this.booksLabel.Size = new System.Drawing.Size(71, 27);
+            this.booksLabel.TabIndex = 7;
+            this.booksLabel.Text = "Books";
+            this.booksLabel.Click += new System.EventHandler(this.booksLabel_Click);
+            // 
+            // moviesLabel
+            // 
+            this.moviesLabel.AutoSize = true;
+            this.moviesLabel.BackColor = System.Drawing.Color.Transparent;
+            this.moviesLabel.Font = new System.Drawing.Font("Ink Free", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.moviesLabel.ForeColor = System.Drawing.Color.White;
+            this.moviesLabel.Location = new System.Drawing.Point(585, 125);
+            this.moviesLabel.Name = "moviesLabel";
+            this.moviesLabel.Size = new System.Drawing.Size(82, 27);
+            this.moviesLabel.TabIndex = 8;
+            this.moviesLabel.Text = "Movies";
+            // 
+            // gamesLabel
+            // 
+            this.gamesLabel.AutoSize = true;
+            this.gamesLabel.BackColor = System.Drawing.Color.Transparent;
+            this.gamesLabel.Font = new System.Drawing.Font("Ink Free", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.gamesLabel.ForeColor = System.Drawing.Color.White;
+            this.gamesLabel.Location = new System.Drawing.Point(1021, 125);
+            this.gamesLabel.Name = "gamesLabel";
+            this.gamesLabel.Size = new System.Drawing.Size(81, 27);
+            this.gamesLabel.TabIndex = 9;
+            this.gamesLabel.Text = "Games";
             // 
             // MainPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1275, 707);
-            this.Controls.Add(this.myFlowLayoutPanel);
+            this.Controls.Add(this.gamesLabel);
+            this.Controls.Add(this.moviesLabel);
+            this.Controls.Add(this.booksLabel);
+            this.Controls.Add(this.booksLayoutPanel);
+            this.Controls.Add(this.gamesLayoutPanel);
+            this.Controls.Add(this.moviesLayoutPanel);
             this.Controls.Add(this.labelofcaption);
             this.Controls.Add(this.navbar);
             this.Controls.Add(this.toppanel);
@@ -196,7 +268,6 @@
             this.toppanel.PerformLayout();
             this.navbar.ResumeLayout(false);
             this.navbar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picturebox_Mute)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,12 +279,18 @@
         private System.Windows.Forms.Button closebutton;
         private System.Windows.Forms.Label labelofapp;
         private System.Windows.Forms.Panel navbar;
-        private System.Windows.Forms.PictureBox picturebox_Mute;
         private System.Windows.Forms.Button button_logout;
         private System.Windows.Forms.Label label_welcome;
         public System.Windows.Forms.Label label_username;
         private System.Windows.Forms.Button button_upload;
         private System.Windows.Forms.Label labelofcaption;
-        private System.Windows.Forms.FlowLayoutPanel myFlowLayoutPanel;
+        private System.Windows.Forms.FlowLayoutPanel booksLayoutPanel;
+        private System.Windows.Forms.FlowLayoutPanel moviesLayoutPanel;
+        private System.Windows.Forms.FlowLayoutPanel gamesLayoutPanel;
+        private System.Windows.Forms.Label booksLabel;
+        private System.Windows.Forms.Label moviesLabel;
+        private System.Windows.Forms.Label gamesLabel;
+        private System.Windows.Forms.Button buttonForMute;
+        private System.Windows.Forms.Button buttonForUnmute;
     }
 }
