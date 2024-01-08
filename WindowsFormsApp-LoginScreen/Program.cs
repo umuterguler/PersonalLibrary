@@ -16,7 +16,22 @@ namespace WindowsFormsApp_LoginScreen
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            try
+            {
+                Form1 form1 = new Form1();
+                Application.Run(form1);
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show($"ArgumentException occurred: {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
         }
+
+
     }
 }

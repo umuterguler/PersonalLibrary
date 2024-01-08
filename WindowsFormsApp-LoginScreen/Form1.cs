@@ -10,6 +10,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace WindowsFormsApp_LoginScreen
 {
@@ -17,7 +18,6 @@ namespace WindowsFormsApp_LoginScreen
     {
         private SqlConnection conn;
 
-        public bool musicPlaying = true;
         SoundPlayer snd = new SoundPlayer();
         MainPage mnpg;
         CreateAccount crtacc;
@@ -62,7 +62,7 @@ namespace WindowsFormsApp_LoginScreen
 
             this.Region = new Region(path);
 
-            
+
             string dizin = Application.StartupPath + "\\music.wav";
             snd.SoundLocation = dizin;
             snd.PlayLooping();
@@ -81,7 +81,7 @@ namespace WindowsFormsApp_LoginScreen
         
 
         private void button_login_Click(object sender, EventArgs e)
-        {   // burda database ile kullanıcı adı sıfre kontrol edılıp girilecek simdilik bos olmamasını sagladım tabı bu yetersız
+        {   
             if (IsEmailValid(textBox_username.Text) && IsPasswordValid(textBox_password.Text))
             {
                 if (checkUserLogin(textBox_username.Text, textBox_password.Text))
@@ -113,15 +113,7 @@ namespace WindowsFormsApp_LoginScreen
             crtacc.Show();
         }
 
-        private void muteButtonForm1_Click(object sender, EventArgs e)
-        {
-            muteMusicFun();
-        }
-
-        private void unmuteButtonForm1_Click(object sender, EventArgs e)
-        {
-            unmuteMusicFun();
-        }
+        
 
         public void muteMusicFun()
         {
@@ -132,7 +124,6 @@ namespace WindowsFormsApp_LoginScreen
             unmuteButtonForm1.Enabled = true;
             unmuteButtonForm1.Visible = true;
 
-            musicPlaying = false;
         }
 
         public void unmuteMusicFun()
@@ -146,7 +137,6 @@ namespace WindowsFormsApp_LoginScreen
             muteButtonForm1.Enabled = true;
             muteButtonForm1.Visible = true;
 
-            musicPlaying = true;
         }
         private bool checkUserLogin(string username, string password)
         {
@@ -175,6 +165,83 @@ namespace WindowsFormsApp_LoginScreen
             {
                 conn.Close();
             }
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                snd.Dispose();
+            }
+
+            base.Dispose(disposing);
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            forgotPassword();
+
+
+        }
+
+        public void forgotPassword()
+        {
+            conn.Open();
+
+            string takenUsername = textBox_username.Text;
+
+            string query = $"SELECT * FROM users WHERE username = '{takenUsername}'";
+
+
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+
+                            string takenPassword = reader.GetString(2);
+
+                            MessageBox.Show("Requirements are done. Password is sended to your mail. (" + takenPassword + ")");
+
+                            textBox_password.Text = takenPassword;
+                            query = string.Empty;
+
+                        }
+                    }
+                    else
+                    {
+                        if (takenUsername != "")
+                        {
+                            MessageBox.Show("There is no user that match with: " + takenUsername);
+                            textBox_password.Text = string.Empty;
+                        }
+                        else
+                        {
+                            MessageBox.Show("You have to fill username field.");
+
+                        }
+
+
+
+                    }
+                }
+            
+            }
+            conn.Close();
+        }
+
+        private void unmuteButtonForm1_Click(object sender, EventArgs e)
+        {
+            unmuteMusicFun();
+        }
+
+        private void muteButtonForm1_Click(object sender, EventArgs e)
+        {
+            muteMusicFun();
         }
     }
 }

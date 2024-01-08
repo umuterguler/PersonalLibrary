@@ -1,0 +1,14 @@
+C:\Users\Melih\Documents\GitHub\PersonalLibrary\WindowsFormsApp-LoginScreen\bin\Release\WindowsFormsApp-LoginScreen.exe.config
+C:\Users\Melih\Documents\GitHub\PersonalLibrary\WindowsFormsApp-LoginScreen\bin\Release\WindowsFormsApp-LoginScreen.exe
+C:\Users\Melih\Documents\GitHub\PersonalLibrary\WindowsFormsApp-LoginScreen\bin\Release\WindowsFormsApp-LoginScreen.pdb
+C:\Users\Melih\Documents\GitHub\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Release\WindowsFormsApp-LoginScreen.csproj.AssemblyReference.cache
+C:\Users\Melih\Documents\GitHub\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Release\WindowsFormsApp_LoginScreen.ContentDetails.resources
+C:\Users\Melih\Documents\GitHub\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Release\WindowsFormsApp_LoginScreen.CreateAccount.resources
+C:\Users\Melih\Documents\GitHub\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Release\WindowsFormsApp_LoginScreen.Form1.resources
+C:\Users\Melih\Documents\GitHub\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Release\WindowsFormsApp_LoginScreen.MainPage.resources
+C:\Users\Melih\Documents\GitHub\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Release\WindowsFormsApp_LoginScreen.Properties.Resources.resources
+C:\Users\Melih\Documents\GitHub\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Release\WindowsFormsApp_LoginScreen.UpdateItem.resources
+C:\Users\Melih\Documents\GitHub\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Release\WindowsFormsApp-LoginScreen.csproj.GenerateResource.cache
+C:\Users\Melih\Documents\GitHub\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Release\WindowsFormsApp-LoginScreen.csproj.CoreCompileInputs.cache
+C:\Users\Melih\Documents\GitHub\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Release\WindowsFormsApp-LoginScreen.exe
+C:\Users\Melih\Documents\GitHub\PersonalLibrary\WindowsFormsApp-LoginScreen\obj\Release\WindowsFormsApp-LoginScreen.pdb

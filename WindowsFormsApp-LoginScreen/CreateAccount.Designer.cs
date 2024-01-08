@@ -44,38 +44,42 @@
             // label_username
             // 
             this.label_username.AutoSize = true;
-            this.label_username.Location = new System.Drawing.Point(24, 87);
-            this.label_username.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_username.Font = new System.Drawing.Font("Garamond", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label_username.ForeColor = System.Drawing.Color.White;
+            this.label_username.Location = new System.Drawing.Point(25, 108);
+            this.label_username.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label_username.Name = "label_username";
-            this.label_username.Size = new System.Drawing.Size(73, 16);
+            this.label_username.Size = new System.Drawing.Size(108, 26);
             this.label_username.TabIndex = 0;
             this.label_username.Text = "Username:";
             // 
             // label_password
             // 
             this.label_password.AutoSize = true;
-            this.label_password.Location = new System.Drawing.Point(27, 130);
-            this.label_password.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_password.Font = new System.Drawing.Font("Garamond", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label_password.ForeColor = System.Drawing.Color.White;
+            this.label_password.Location = new System.Drawing.Point(29, 165);
+            this.label_password.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label_password.Name = "label_password";
-            this.label_password.Size = new System.Drawing.Size(70, 16);
+            this.label_password.Size = new System.Drawing.Size(102, 26);
             this.label_password.TabIndex = 1;
             this.label_password.Text = "Password:";
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(109, 84);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsername.Location = new System.Drawing.Point(136, 110);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(5);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(199, 22);
+            this.txtUsername.Size = new System.Drawing.Size(248, 28);
             this.txtUsername.TabIndex = 2;
             this.txtUsername.Tag = "placeholder";
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(109, 127);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.Location = new System.Drawing.Point(136, 167);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(5);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(199, 22);
+            this.txtPassword.Size = new System.Drawing.Size(248, 28);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.Tag = "placeholder";
             // 
@@ -86,19 +90,20 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(348, 36);
+            this.panel1.Size = new System.Drawing.Size(435, 47);
             this.panel1.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Garamond", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(16, 9);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(20, 12);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 16);
+            this.label2.Size = new System.Drawing.Size(155, 26);
             this.label2.TabIndex = 1;
             this.label2.Text = "Create Account";
             // 
@@ -108,11 +113,11 @@
             this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(312, 0);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Location = new System.Drawing.Point(390, 0);
+            this.button2.Margin = new System.Windows.Forms.Padding(5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(36, 36);
+            this.button2.Size = new System.Drawing.Size(45, 47);
             this.button2.TabIndex = 0;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -120,20 +125,23 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(88, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Font = new System.Drawing.Font("Garamond", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(130, 61);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 25);
+            this.label1.Size = new System.Drawing.Size(184, 31);
             this.label1.TabIndex = 5;
             this.label1.Text = "Create Account";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(124, 171);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.BackgroundImage = global::WindowsFormsApp_LoginScreen.Properties.Resources.bg;
+            this.button1.Font = new System.Drawing.Font("Garamond", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.Location = new System.Drawing.Point(150, 218);
+            this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 28);
+            this.button1.Size = new System.Drawing.Size(125, 37);
             this.button1.TabIndex = 6;
             this.button1.Text = "Create";
             this.button1.UseVisualStyleBackColor = true;
@@ -141,9 +149,10 @@
             // 
             // CreateAccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(348, 214);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.ClientSize = new System.Drawing.Size(435, 281);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -151,8 +160,10 @@
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label_password);
             this.Controls.Add(this.label_username);
+            this.Font = new System.Drawing.Font("Garamond", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "CreateAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateAccount";
